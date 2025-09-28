@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Cart {
 
-    public Item[] contents;
+    private Item[] contents;
     int index;
 
     Cart(Item[] _contents) {
@@ -40,7 +40,7 @@ public class Cart {
 
     public int findItemInArray(Item item) {
         for (int i = 0; i < index; i++) {
-            if (contents[i].id == item.id) {
+            if (contents[i].getId() == item.getId()) {
                 return i;
             }
         }
@@ -65,5 +65,9 @@ public class Cart {
         return "Cart{" +
                 "contents=" + Arrays.toString(contents) +
                 '}' + "\n";
+    }
+
+    public Item[] getContents() {
+        return contents;
     }
 }

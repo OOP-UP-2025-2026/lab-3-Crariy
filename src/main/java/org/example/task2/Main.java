@@ -3,6 +3,11 @@ package org.example.task2;
 public class Main {
     public static void main(String[] args) {
 
+        Box box = new Box(3,4,5);
+        System.out.println("Surface area: " + box.getSurfaceArea());
+        System.out.println("Lateral surface area: " + box.getLateralSurfaceArea());
+        System.out.println("Volume: " + box.getVolume());
+
         Cart cart = new Cart(new Item[10]);
         cart.add(new Item(1, "Samsung Galaxy S23", 27999));
         cart.add(new Item(2, "Lenovo IdeaPad 3", 19499));
@@ -24,5 +29,37 @@ public class Main {
         Order order = new Order(1L, "John");
         String bill = order.formOrderBill(cart);
         System.out.println(bill);
+
+        int[] test = new int[5];
+        System.out.println(test.length);
+
+//        IntStack stack = new IntStack();
+//        stack.isEmpty();
+
+//
+//        IntStack stack = new IntStack();
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(4);
+//        stack.push(5);
+//        stack.push(6);
+//        stack.push(7);
+//        stack.push(8);
+//        stack.push(9);
+//        stack.push(10);
+//        stack.push(11);
+//        System.out.println(stack.peek());
+//        System.out.println("Довжина -> " + stack.size());
+//        System.out.println(stack.pop());
+//        System.out.println("Довжина -> " + stack.size());
+//        System.out.println(stack.peek());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.peek());
+//        stack.push(2);
+//        System.out.println(stack.peek());
+//        System.out.println("Довжина -> " + stack.size());
+//        stack.clear();
+//        System.out.println("Довжина -> " + stack.size());
     }
 }
